@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0060)http://homepages.cwi.nl/~jve/courses/5talen/haskellOpdr.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>Haskell Opdrachten 5 Talen Week</title>
+  </head>
+
+  <body bgcolor="ffffff" text="000000" link="d30000" vlink="000595" alink="ffffff">
+
+<center> 
+    <h1>Haskell Opdrachten 5 Talen Week</h1>
+</center>
+
+<ol>
+
+<li> Zorg dat je <b>ghci</b> beschikbaar hebt op 
+je computer. 
+Website: 
+<a href="http://www.haskell.org/platform">www.haskell.org/platform</a>.
+
+
+
+</li><li> Start het <b>ghci</b> systeem op met behulp van het commando
+<b>ghci</b>, gevolgd door return. Je ziet dan iets dat lijkt op het
+volgende:
+
+<pre>jve@vuur:~/courses/5talen$ ghci 
+GHCi, version 6.12.1: http://www.haskell.org/ghc/  :? for help
+Loading package ghc-prim ... linking ... done.
+Loading package integer-gmp ... linking ... done.
+Loading package base ... linking ... done.
+Prelude&gt; 
+</pre>
+
+</li><li> 
+Probeer nu eerst Haskell uit als rekenmachine. Hoeveel is 2^3^4 ? 
+Wordt dit door de interpreter gelezen als (2^3)^4 of als 2^(3^4)? 
+
+</li><li> Bereken hoeveel seconden er in een schrikkeljaar gaan. Een schrikkeljaar
+heeft 366 dagen. 
+
+</li><li> 
+Verlaat nu de <b>ghci</b> interpreter met behulp van 'control-d' (de control 
+toets ingedrukt houden en een 'd' intypen), of met behulp van <b>:q</b>. 
+
+</li><li> Maak een tekstbestand aan met de titel <b>kwadraat.hs</b> en zorg dat er 
+het volgende in staat: 
+
+<pre>kwdr :: Integer -&gt; Integer
+kwdr x = x * x 
+</pre>
+
+Sla het bestand op en sluit je editor af.  Blijf in hetzelfde
+directory waar
+<b>kwadraat.hs</b> zich bevindt, en start <b>ghci</b> opnieuw op met
+behulp van het commando <b>ghci kwadraat.hs</b>, gevolgd door return.
+Je komt nu opnieuw in het systeem, maar dit keer is de prompt niet
+<b>Prelude&gt;</b> maar <b>*Main&gt;</b>. 
+Dit geeft aan dat er een eigen bestand is geladen. 
+Probeer de definitie uit: 
+
+<pre>*Main&gt; kwdr 7
+</pre>
+
+Bereken vervolgens: 
+
+<pre>*Main&gt; kwdr (kwdr (kwdr (kwdr 7)))
+</pre>
+
+</li><li> Verlaat het systeem weer, en start nu op met <b>5t.hs</b>, dat
+je vantevoren hebt opgehaald van internet (het staat <a href="http://homepages.cwi.nl/~jve/courses/5talen/5t.hs">hier</a>).
+Dit bestand bevat alle voorbeeldprogramma's uit de slides van de 
+minicursus. Probeer de definities uit de slides uit: 
+
+<pre>*Main&gt; kwadraat 7
+</pre>
+
+<pre>*Main&gt; drievoud 7
+</pre>
+
+<pre>*Main&gt; awoord "zeven"
+</pre>
+
+Ga na of <b>kwadraat</b> zich op dezelfde manier gedraagt 
+als de functie <b>kwdr</b> uit 
+de vorige opdracht. Zo nee, wat is het verschil? 
+
+</li><li>Probeer <b>primes</b> en <b>primes'</b> met elkaar te vergelijken. 
+Welke van de twee genereert de reeks van priemgetallen sneller? 
+Maakt het veel uit? Om de oneindige reeksontwikkeling na een tijd 
+af te sluiten kun je 'control-c' gebruiken. 
+
+</li><li>
+Gebruik nu de editor om het bestand <b>5t.hs</b> aan te vullen met
+een eigen definitie van <b>bwoord</b>, voor tekenrijtjes die de letter
+'b' bevatten.  Laad de nieuwe versie, en probeer uit.
+
+</li><li>
+Gebruik de editor om het bestand <b>5t.hs</b> aan te vullen met
+een eigen definitie van <b>letter_in_woord</b>, om na te gaan 
+of een bepaalde letter in een bepaald woord voorkomt. 
+Laad de nieuwe versie, en probeer uit.
+
+</li></ol> 
+
+Als je tot hier gekomen bent ben je toe aan de opdrachten 
+uit de cursus slides. Je kunt de nieuwe functies waarnaar gevraagd 
+wordt toevoegen aan het bestand <b>5t.hs</b>, het bestand vervolgens 
+herladen in <b>ghci</b> met behulp van <b>:add 5t.hs</b>, en de functies 
+uitproberen. Maak zoveel mogelijk gebruik van de voorbeeldfuncties
+die al in  <b>5t.hs</b> staan. Hier volgen de opdrachten uit 
+de slides: 
+
+<ol> 
+
+<li> Schrijf een functie die de positieve breuken opsomt. 
+Het bestaan van deze functie bewijst dat de verzameling van 
+positieve breuken <b>aftelbaar</b> is. 
+
+</li><li> Schrijf een functie die Mersenne priemgetallen genereert. 
+Hoeveel Mersenne priemgetallen kun je hiermee vinden? 
+
+</li><li> Schrijf een functie die priemparen genereert. 
+
+</li><li> Schrijf een functie die priemdrietallen genereert. 
+Hoeveel priemdrietallen kun je vinden? Hoeveel priemdrietallen 
+zijn er? Waarom?
+
+</li><li>Schrijf een Haskell programma dat tegenvoorbeelden genereert
+tegen het vermoeden dat 
+<pre>(prime_1 * ... * prime_k) + 1
+</pre>
+altijd een priemgetal is als 
+<pre>prime_1</pre> tot en met <pre>prime_k</pre> de eerste k 
+priemgetallen zijn. 
+
+</li><li> Schrijf een functie die pythagorische drietallen genereert. 
+
+</li></ol>
+Als je dit allemaal achter de kiezen hebt: <b>The sky is the limit for 
+you!</b> 
+
+  
+
+</body></html>
