@@ -1,0 +1,22 @@
+<h1>5 Talen in 5 Dagen</h1>
+
+<p style='width:200px;'>What do you think about the course so far? What's your favorite part of the course and what's your least favorite?</p>
+
+
+<%= link_to 'Give your opinion!', new_post_path %>
+
+<% @posts.each do |post| %>
+  <div class="blogpost">
+	--------------------------
+    <p><%= post.content %></p>
+	<p style='font-size:9px;'><b>Name: </b><%= post.name %> <b>Date: </b><%= post.title %></p>
+    <td><%= link_to 'Show', post %></td>
+    <td><%= link_to 'Edit', edit_post_path(post) %></td>
+    <td><%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+
+
+<br />
+
+
